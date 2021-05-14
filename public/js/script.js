@@ -3,25 +3,12 @@ let dieOnScreen = document.querySelector('#animation');
 let audio = new Audio('/sound/diceTossed.wav');
 
 btnRoll.addEventListener('click', function() {
-    
-    let dieToss = valueForDice();
 
     startAnimation();
+    //let dieToss = valueForDice();
     //displayDice(dieOnScreen, dieToss);
     //console.log(dieOnScreen);
 })
-
-function valueForDice(){
-    
-    let dieScore = Math.round(Math.random() * 5) + 1;
-    return dieScore;
-} 
-
-function displayDice(image, numOfImage){
-    
-    console.log(image);
-    image.src = 'img/die0' + numOfImage + '.png';   
-}
 
 function startAnimation(){
     
@@ -43,5 +30,20 @@ function startAnimation(){
             clearInterval(animationLoop);
         }
     }, 125);
+
+/*
+    function valueForDice(){
+        
+        let dieScore = Math.round(Math.random() * 5) + 1;
+        return dieScore;
+    } 
+
+    function displayDice(image, numOfImage){
+        
+        console.log(image);
+        image.src = 'img/die0' + numOfImage + '.png';   
+    }
+
+*/
     
 }
